@@ -1,5 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
-
+import Link from 'next/link'
 const requirements = [
     'Attend Mass regularly.',
     'Attendance at Meetings',

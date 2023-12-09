@@ -167,7 +167,7 @@ export default function AboutUs() {
           <div className="mx-auto">
             <p className="mt-6 text-lg leading-8 text-gray-600">The pages of our history come alive in July 1899 when the National Assembly reconvened within these hallowed
               walls. Tarlac became the stage for a crucial chapter in the story of the First Republic of the Philippines. Laws were
-              penned, and on July 16, 1899, an appropriation for the Republic's resistance against the forces of America found
+              penned, and on July 16, 1899, an appropriation for the Republic&apos;s resistance against the forces of America found
               its voice within these sacred confines.</p>
             <p className="mt-6 text-lg leading-8 text-gray-600">A momentous occasion unfolded on August 23, 1899, as Apolinario Mabini ascended to the position of Chief
               Justice of the Supreme Court of the Philippines, leaving an indelible mark on the annals of our legal history.
