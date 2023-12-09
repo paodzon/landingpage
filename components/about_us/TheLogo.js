@@ -1,5 +1,5 @@
 import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
-
+import Image from 'next/image'
 const features = [
   {
     name: 'Foundation of Tarlac City',
@@ -39,7 +39,9 @@ export default function TheLogo() {
             The Logo
           </p>
           <div className="mt-10 relative overflow-hidden rounded-3xl px-6 pb-9 pt-96">
-              <img
+              <Image
+                width={200}
+                height={200}
                 className="absolute inset-0 h-full w-full object-contain"
                 src="/images/the_logo/1.jpg"
                 alt=""

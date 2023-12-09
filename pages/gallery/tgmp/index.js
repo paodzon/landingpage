@@ -1,5 +1,6 @@
 import { ArrowLeftCircleIcon} from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router';
+import Image from 'next/image'
   export default function TGMP() {
     const router = useRouter()
     const photoArray = Array.from({ length: 11 }, (_, index) => index);
@@ -17,7 +18,7 @@ import { useRouter } from 'next/router';
                 key={number}
                 className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
               >
-                <img src={`/images/tgmp/${number+1}.jpg`} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+                <Image height={400} width={400} src={`/images/tgmp/${number+1}.jpg`} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
                 <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
   
               </article>

@@ -1,5 +1,5 @@
 import { PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
-
+import Link from 'next/link'
 const navigation = [
   {
     name: 'Facebook',
@@ -34,9 +34,9 @@ export default function Footer() {
 
          <div className='flex justify-start'>
          {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-center">
+            <Link key={item.name} href={item?.href || '#'} className="text-center">
               <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
+            </Link>
           ))}
          </div>
 

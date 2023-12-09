@@ -2,8 +2,8 @@ import Footer from "@/components/common/Footer";
 import Calendar from "@/components/homepage/Calendar";
 import Hero from "@/components/homepage/Hero";
 import Schedule from "@/components/homepage/Schedule";
-
-
+import Image from 'next/image'
+import Link from 'next/link'
 export default function Home() {
   return (
     <div>
@@ -11,7 +11,9 @@ export default function Home() {
       <Schedule/>
       <div className="relative bg-gray-900">
       <div className="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
-        <img
+        <Image
+        width={500}
+        height={500}
           className="h-full w-full object-cover"
           src="/images/san_seb/15.jpg"
           alt=""
@@ -46,12 +48,12 @@ export default function Home() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Explore Our Gallery</p>
   
           <div className="mt-8">
-            <a
+            <Link
               href="/gallery"
               className="inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               More photos
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -318,11 +318,11 @@ console.log("Today is day " + dayOfWeekNumber);
                   <ol className="mt-2 ">
                     {day.events.map((event) => (
                       <li key={event.id}>
-                        <a href={event.href} className="group flex">
+                        <div className="group flex">
                           <p className="text-center flex-auto truncate font-medium text-gray-900 group-hover:text-indigo-600">
                             {event.name}
                           </p>
-                        </a>
+                        </div>
                       </li>
                     ))}
     
@@ -334,9 +334,9 @@ console.log("Today is day " + dayOfWeekNumber);
         
         </div>
       </div>
-      {days.map((day)=> {
+      {days.map((day, idx)=> {
         if(day.day === dayOfWeekNumber && day.time !== ''){
-          return <div className="pt-4 px-4 py-1 sm:px-6 lg:hidden">
+          return <div key={idx} className="pt-4 px-4 py-1 sm:px-6 lg:hidden">
             <ol className="divide-y divide-gray-100 overflow-hidden rounded-lg bg-white text-sm shadow ring-1 ring-black ring-opacity-5">
               <div> 
               <time className="mt-2 flex items-center font-semibold text-center justify-center text-gray-700">

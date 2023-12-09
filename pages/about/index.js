@@ -1,5 +1,5 @@
 import TheLogo from '@/components/about_us/TheLogo'
-
+import Image from 'next/image'
 const posts = [
   {
     id: 1,
@@ -44,7 +44,9 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 mt-10">
             <div className="mx-8 relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-96 shadow-2xl">
-              <img
+              <Image
+              width={400}
+              height={400}
                 className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
                 src="/images/about_us/1.jpg"
                 alt=""
@@ -111,7 +113,9 @@ export default function AboutUs() {
           </div>
           <div className="lg:pr-4">
             <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-96 shadow-2xl">
-              <img
+              <Image
+              width={400}
+              height={400}
                 className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
                 src="/images/about_us/2.jpg"
                 alt=""
@@ -132,7 +136,9 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 mt-10">
             <div className="mx-8 relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-96 shadow-2xl">
-              <img
+              <Image
+              width={400}
+              height={400}
                 className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
                 src="/images/history/1.jpg"
                 alt=""
@@ -193,7 +199,10 @@ export default function AboutUs() {
         <ul role="list" className="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-1">
           {posts.map((post) => (
             <li key={post.name} className="flex flex-col gap-10 pt-12 sm:flex-row">
-              <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={post.imageUrl} alt="" />
+              <Image 
+              width={400}
+              height={400}
+              className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={post.imageUrl} alt="" />
               <div className="flex-auto text-justify">
                 <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{post.name}</h3>
                 <p className="text-base leading-7 text-gray-600">{post.role}</p>

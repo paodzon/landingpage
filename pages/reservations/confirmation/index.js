@@ -78,8 +78,8 @@ and adults are welcome to participate.
                             role="list"
                             className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
                         >
-                            {baptismFeeGuidelines.map((feature) => (
-                                <li className="flex gap-x-3">
+                            {baptismFeeGuidelines.map((feature, idx) => (
+                                <li key={idx} className="flex gap-x-3">
                                     <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                     {feature}
                                 </li>

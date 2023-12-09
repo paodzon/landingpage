@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Link from 'next/link'
 const posts = [
   {
     id: 1,
@@ -40,7 +42,10 @@ export default function Gallery() {
               key={post.id}
               className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
             >
-              <img src={post.imageUrl} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+              <Image
+              width={400}
+              height={400}
+              src={post.imageUrl} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
               <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
@@ -51,10 +56,10 @@ export default function Gallery() {
             
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href={post.href}>
+                <Link href={post.href}>
                   <span className="absolute inset-0" />
                   {post.title}
-                </a>
+                </Link>
               </h3>
             </article>
           ))}

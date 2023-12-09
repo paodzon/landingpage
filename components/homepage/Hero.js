@@ -1,5 +1,6 @@
 
-
+import Image from 'next/image'
+import Link from 'next/link'
 export default function Hero() {
 
   const scrollToSection = (sectionId) => {
@@ -22,7 +23,9 @@ export default function Hero() {
 
 
       <div className="relative isolate overflow-hidden pt-14">
-        <img
+        <Image
+        width={500}
+        height={400}
           src="/images/bg_pics/1.jpg"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
@@ -46,16 +49,16 @@ export default function Hero() {
             </h1>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <button
                
                 onClick={() => scrollToSection('schedule')}
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
               >
                 Show schedule
-              </a>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white">
+              </button>
+              <Link href="/about" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
