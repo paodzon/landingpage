@@ -1,5 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
-
+import Link from 'next/link'
 const requirements = [
     "A child must be a baptized Catholic. A copy of the certificate must be on file with the San Sebastian Cathedral Parish of Tarlac office.",
     "Attend the Parish Faith Formation Program.",
@@ -38,12 +38,12 @@ export default function Communion() {
                         </ul>
         
                         <div className="flex justify-center">
-                            <button
-                                href="#"
+                            <Link
+                                href="/reservations"
                                 className="mt-20 block w-2/4 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Make Reservations
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

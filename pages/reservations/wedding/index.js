@@ -1,5 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
-
+import Link from 'next/link'
 const weddingReservationGuidelines = [
     "Reservations must be made as early as possible or not later than three (3) months BEFORE THE WEDDING.",
     "There is a 1-day seminar from 9 am to 4 pm.",
@@ -72,12 +72,12 @@ export default function Wedding() {
         
         
                         <div className="flex justify-center">
-                            <button
-                                href="#"
+                            <Link
+                                href="/reservations"
                                 className="mt-20 block w-2/4 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Make Reservations
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

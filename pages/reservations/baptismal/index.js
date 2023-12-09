@@ -1,5 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
-
+import Link from 'next/link'
 const requirements = [
     'Registration should be made at least three weeks before the Baptism date.',
     'Birth Certificate (Original copy)',
@@ -24,11 +24,11 @@ export default function Baptismal() {
                         <p className="mt-6 text-base leading-7 text-gray-600">The celebration of the Sacrament of Baptism is a communal event within the Holy
                             Mass, scheduled on a designated Sunday for Baptism, from 11:00-12:00 pm. In
                             Baptism, your child becomes a member of the Church, and our parish community is
-                            delighted to be present at this significant beginning of your child's faith journey.
+                            delighted to be present at this significant beginning of your child&apos;s faith journey.
                             Baptism becomes more meaningful when more people pray for your child.
                             Note: To emphasize the communitarian dimension of the sacrament, the parish
                             discourages individual/special baptisms, except for serious reasons (medical
-                            emergencies, security, etc.). "For convenience" is not considered a serious reason.</p>
+                            emergencies, security, etc.). &apos;For convenience&apos; is not considered a serious reason.</p>
                         <h3 className="text-2xl font-bold tracking-tight text-gray-900 mt-10">Parents</h3>
                         <p className="mt-6 text-base leading-7 text-gray-600">
                             Parents should be married in the Catholic Church. To nurture their child in the
@@ -73,12 +73,12 @@ export default function Baptismal() {
                             ))}
                         </ul>
                         <div className="flex justify-center">
-                            <button
-                                href="#"
+                            <Link
+                                href="/reservations"
                                 className="mt-20 block w-2/4 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Make Reservations
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

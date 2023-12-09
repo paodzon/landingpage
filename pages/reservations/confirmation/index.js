@@ -1,5 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
-
+import Link from 'next/link'
 const confirmationGuidelines = [
     "Candidates will choose a sponsor who will stand with them as they are presented to the Bishop for Confirmation.",
     "The Church encourages, if possible, that one of the Baptismal Godparents serves as a sponsor for Confirmation.",
@@ -48,8 +48,8 @@ and adults are welcome to participate.
                             role="list"
                             className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
                         >
-                            {confirmationGuidelines.map((feature) => (
-                                <li className="flex gap-x-3">
+                            {confirmationGuidelines.map((feature, idx) => (
+                                <li key={idx} className="flex gap-x-3">
                                     <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                     {feature}
                                 </li>
@@ -87,12 +87,12 @@ and adults are welcome to participate.
                         </ul>
         
                         <div className="flex justify-center">
-                            <button
-                                href="#"
+                            <Link
+                                href="/reservations"
                                 className="mt-20 block w-2/4 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Make Reservations
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

@@ -264,9 +264,7 @@ export default function Calendar() {
   var today = new Date();
   var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-// Get the day of the week (0-6, where 0 is Sunday, 1 is Monday, and so on)
 var dayOfWeekNumber = today.getDay();
-console.log("Today is day " + dayOfWeekNumber);
 
   return (
     <div className=" lg:flex lg:h-full lg:flex-col">
