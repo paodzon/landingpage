@@ -1,221 +1,123 @@
 import TheLogo from '@/components/about_us/TheLogo'
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-const features = [
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
-  },
-]
 
-const people = [
+const posts = [
   {
-    name: 'Leonard Krasner',
-    role: 'Senior Designer',
+    id: 1,
+    description:
+      'A devoted servant of the church for over sixdecades. Born on May 6, 1918, in Bautista, he was ordained as a priest on March 29, 1941, in Lingayen, Philippines.At the age of 44, Bishop Sison received a significant appointment as the Bishop of Tarlac on March 8, 1963. Hisconsecration took place on May 11, 1963, at the venerable Saint Sebastian Cathedral in Tarlac. After serving theDiocese of Tarlac for 25 years, he resigned on January 21, 1988, at 69. Bishop Sison continued his journey asBishop Emeritus until his peaceful passing on March 26, 2004, at 85, in El Paso, TX, USA. His profoundcontributions as a Council Father at the Second Vatican Council and his 40.8 years of episcopal service leave anenduring legacy in the annals of the Catholic Church.',
     imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.',
+      '/images/bishops/1.jpg',
+      name: 'Bishop Jesus J. Sison, D.D. ',
+   
   },
   {
-    name: 'Leonard Krasner',
-    role: 'Senior Designer',
+    id: 2,
+    description:
+      "Born on March 14, 1938, in Guimba, Nueva Ecija. Ordained as a prieston December 21, 1963, in Cabanatuan City, his steadfast dedication to the Church earned him the appointment asBishop of San Jose on May 24, 1984, at the age of 46. Consecrated as a bishop on July 14, 1984, he assumed therole of Coadjutor Bishop of Tarlac on August 17, 1985, at the age of 47, eventually succeeding as Bishop on January21, 1988, at the age of 49. Bishop Cinense's enduring service spanned almost 60 years, retiring as Bishop Emeritusof Tarlac on March 31, 2016, at the age of 78. Beyond local duties, his contributions extend to the wider Churchcommunity as a member of the Catholic Bishops' Conference of the Philippines' Episcopal Commission onEcumenical Affairs. His life is a testament to unwavering commitment and leadership, leaving an indelible mark onthe Diocese of Tarlac and the broader Catholic community.",
     imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.',
-  },
-  {
-    name: 'Leonard Krasner',
-    role: 'Senior Designer',
+      '/images/bishops/2.jpg',
+      name: 'Bishop Florentino F. Cinense, D.D., PhD, STL',
+   
+  },  {
+    id: 3,
+    description:
+      'A devoted Filipino prelate, born inManila. Ordained as a priest on May 19, 1979, in the Archdiocese of Lingayen-Dagupan, he served diligently untilhis appointment as the Bishop of Tarlac at the age of 60. His consecration followed on May 24, 2016, at the SaintJohn Evangelist Cathedral in Dagupan City. Sadly, at the age of 67, Bishop Macaraeg passed away due to a cardiacarrest while playing basketball in Malasiqui, Archdiocese of Lingayen-Dagupan, leaving behind a legacy of unwavering dedication to his faith and community. May he rest in eternal peace.',
     imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.',
+      '/images/bishops/3.jpg',
+      name: 'Bishop Enrique de Vera Macaraeg ',
+      role: 'December 28, 1955 – October 23, 2023',
+   
   },
-  // More people...
+  // More posts...
 ]
 
 export default function AboutUs() {
   return <div>
-    <div className="mt-24 bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="mt-24 bg-white px-6 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">About us</h2>
+        <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">About us</h2>
       </div>
     </div>
     {/* About 1 */}
-    <div className="bg-white pb-24 sm:pb-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="lg:pr-4">
-            <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+    <div className="overflow-hidden bg-white py-24 sm:py-32 text-justify">
+      <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+          <div className="lg:pr-4 mt-10">
+            <div className="mx-8 relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-96 shadow-2xl">
               <img
                 className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
-                src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
+                src="/images/about_us/1.jpg"
                 alt=""
               />
-              <div className="absolute inset-0 bg-gray-900 mix-blend-multiply" />
-              <div
-                className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-40"
-                  style={{
-                    clipPath:
-                      'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                  }}
-                />
-              </div>
-              <figure className="relative isolate">
-                <svg
-                  viewBox="0 0 162 128"
-                  fill="none"
-                  aria-hidden="true"
-                  className="absolute -left-2 -top-4 -z-10 h-32 stroke-white/20"
-                >
-                  <path
-                    id="0ef284b8-28c2-426e-9442-8655d393522e"
-                    d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z"
-                  />
-                  <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x={86} />
-                </svg>
-                <img src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt="" className="h-12 w-auto" />
-                <blockquote className="mt-6 text-xl font-semibold leading-8 text-white">
-                  <p>
-                    “Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare
-                    arcu gravida natoque erat et cursus tortor.”
-                  </p>
-                </blockquote>
-                <figcaption className="mt-6 text-sm leading-6 text-gray-300">
-                  <strong className="font-semibold text-white">Judith Rogers,</strong> CEO at Workcation
-                </figcaption>
-              </figure>
+              <div className="absolute inset-0 bg-gray-300 mix-blend-multiply" />
             </div>
           </div>
-          <div>
-            <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">Company values</p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                On a mission to empower remote teams
-              </h1>
-              <div className="max-w-xl">
-                <p className="mt-6">
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                  semper sed amet vitae sed turpis id.
-                </p>
-                <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
-                <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
-              </div>
-            </div>
-            <div className="mt-10 flex">
-              <a href="#" className="text-base font-semibold leading-7 text-indigo-600">
-                Learn more about our company <span aria-hidden="true">&rarr;</span>
-              </a>
+          <div className="px-6 md:px-0 lg:pr-4 lg:pt-4">
+            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Welcome to the San Sebastian Cathedral Parish of Tarlac, a living testament to centuries of history, faith, and
+                resilience. Our journey traces back to the roots of Tarlac City, once part of Pampanga, established in 1686 by
+                devoted priests assigned to Magalang. The church, founded in the same year and administered by the Augustinians
+                from Pampanga, gained independence in 1727, marking the beginning of its storied legacy.
+              </p>
+              <p className="mt-6 text-lg leading-8 text-gray-600">The first parochial building, erected in 1740 by Father Agustion Barriocanal, laid the foundation for what would
+                become a beacon of faith in the region. Father Baltazar Gamarra later constructed a wood and stone church in
+                1872, completed with dedication by Father Fermin Sardon in 1890. Unfortunately, the ravages of World War II led
+                to the destruction of this church, and the present-day neo-gothic structure emerged from the ashes in 1945.</p>
+
             </div>
           </div>
+
+        </div>
+        <div className="px-6 md:px-0 lg:pr-4 lg:pt-4 mx-4">
+          <div className="mx-auto">
+          <p className="mt-6 text-lg leading-8 text-gray-600">Dedicated to San Sebastian, our post-war church features an exquisite facade adorned with ornate stained glass
+            windows. The hues of beige, pink, and white create a captivating visual experience, with the image of our patron
+            saint prominently displayed at the entrance porch.</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">San Sebastian Cathedral holds a unique place in Philippine history, serving as the venue for the Philippine
+            Revolutionary Congress during the Philippine-American War. In 1899, pivotal decrees were issued within these
+            sacred walls, shaping the course of the First Philippine Republic. The cathedral, once the seat of Emilio Aguinaldo’s
+            Revolutionary Government, also housed the Literaria Cientifico Universidad de Malolos, with diplomas signed by
+            General Emilio Aguinaldo himself.</p>
+          </div>
+
         </div>
       </div>
     </div>
+
     {/* About 2 */}
 
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 
           <div>
             <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">Company values</p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                On a mission to empower remote teams
-              </h1>
               <div className="max-w-xl">
                 <p className="mt-6">
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                  semper sed amet vitae sed turpis id.
+                  Despite the challenges of war, the church, identical to the Concepcion, Tarlac structure, was rebuilt into its
+                  present-day form. Today, it stands not only as a place of worship but also as a cherished pilgrimage site, drawing
+                  visitors to the Chapel of the Blessed Sacrament within the cathedral. This spiritual haven has become a beloved
+                  stop for pilgrim tours, offering a profound connection to our history and faith before embarking on journeys to the
+                  Monasterio De Tarlac.
                 </p>
                 <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
-                <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
+                  Join us in exploring the vibrant history and enduring spirit of the San Sebastian Cathedral Parish of Tarlac. Here,
+                  every stone speaks of resilience, every window reflects the light of faith, and every visit becomes a pilgrimage 2 through time.  </p>
+
               </div>
             </div>
-            <div className="mt-10 flex">
-              <a href="#" className="text-base font-semibold leading-7 text-indigo-600">
-                Learn more about our company <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
+
           </div>
           <div className="lg:pr-4">
-            <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+            <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-96 shadow-2xl">
               <img
                 className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
-                src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
+                src="/images/about_us/2.jpg"
                 alt=""
               />
-              <div className="absolute inset-0 bg-gray-900 mix-blend-multiply" />
-              <div
-                className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-40"
-                  style={{
-                    clipPath:
-                      'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                  }}
-                />
-              </div>
-              <figure className="relative isolate">
-                <svg
-                  viewBox="0 0 162 128"
-                  fill="none"
-                  aria-hidden="true"
-                  className="absolute -left-2 -top-4 -z-10 h-32 stroke-white/20"
-                >
-                  <path
-                    id="0ef284b8-28c2-426e-9442-8655d393522e"
-                    d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z"
-                  />
-                  <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x={86} />
-                </svg>
-                <img src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt="" className="h-12 w-auto" />
-                <blockquote className="mt-6 text-xl font-semibold leading-8 text-white">
-                  <p>
-                    “Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare
-                    arcu gravida natoque erat et cursus tortor.”
-                  </p>
-                </blockquote>
-                <figcaption className="mt-6 text-sm leading-6 text-gray-300">
-                  <strong className="font-semibold text-white">Judith Rogers,</strong> CEO at Workcation
-                </figcaption>
-              </figure>
+              <div className="absolute inset-0 bg-gray-300 mix-blend-multiply" />
+
             </div>
           </div>
         </div>
@@ -225,81 +127,78 @@ export default function AboutUs() {
 
     {/* History */}
 
-    <div className="overflow-hidden bg-white py-24 sm:py-32">
+    <div className="overflow-hidden bg-white py-24 sm:py-32 text-justify">
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
-          <div className="px-6 md:px-0 lg:pr-4 lg:pt-4">
-            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste dolor cupiditate blanditiis ratione.
-              </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
-                    <dt className="inline font-semibold text-gray-900">
-                      <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
-                      {feature.name}
-                    </dt>{' '}
-                    <dd className="inline">{feature.description}</dd>
-                  </div>
-                ))}
-              </dl>
+          <div className="lg:pr-4 mt-10">
+            <div className="mx-8 relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-96 shadow-2xl">
+              <img
+                className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
+                src="/images/history/1.jpg"
+                alt=""
+              />
+              <div className="absolute inset-0 bg-gray-300 mix-blend-multiply" />
             </div>
           </div>
-          <div className="sm:px-6 lg:px-0">
-            <div className="relative isolate overflow-hidden bg-indigo-500 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 sm:pt-16 lg:mx-0 lg:max-w-none">
-              <div
-                className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white"
-                aria-hidden="true"
-              />
-              <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                <div className="w-screen overflow-hidden rounded-tl-xl bg-gray-900 ring-1 ring-white/10">
-                  <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                    <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
-                      <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                        NotificationSetting.jsx
-                      </div>
-                      <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
-                    </div>
-                  </div>
-                  <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
-                </div>
-              </div>
-              <div
-                className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"
-                aria-hidden="true"
-              />
+          <div className="px-6 md:px-0 lg:pr-4 lg:pt-4">
+            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">History</p>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                In the year 1686, Tarlac City emerged as a humble visita of Magalang, Pampanga, cradled under the patronage of
+                San Sebastian. A testament to unwavering faith, the seeds of this sacred haven were planted. Over time, the
+                echoes of devotion grew louder, and in 1727, the nascent visita blossomed into a parish, carving its place in the
+                chronicles of spiritual heritage.
+              </p>
+              <p className="mt-6 text-lg leading-8 text-gray-600">The winds of change swept through in 1872, as the church underwent a transformative reconstruction, its
+                foundations solidifying in stone. This architectural metamorphosis laid the groundwork for a sacred sanctuary that
+                would weather the tests of time.</p>
+
             </div>
+          </div>
+
+        </div>
+        <div className="px-6 md:px-0 lg:pr-4 lg:pt-4 mx-4">
+          <div className="mx-auto">
+            <p className="mt-6 text-lg leading-8 text-gray-600">The pages of our history come alive in July 1899 when the National Assembly reconvened within these hallowed
+              walls. Tarlac became the stage for a crucial chapter in the story of the First Republic of the Philippines. Laws were
+              penned, and on July 16, 1899, an appropriation for the Republic's resistance against the forces of America found
+              its voice within these sacred confines.</p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">A momentous occasion unfolded on August 23, 1899, as Apolinario Mabini ascended to the position of Chief
+              Justice of the Supreme Court of the Philippines, leaving an indelible mark on the annals of our legal history.
+              Concurrently, the Literary University of the Philippines, under the guiding hand of Leon Ma. Guerrero, reopened its
+              doors on August 8, 1899. The only graduation ceremony graced these venerable halls on September 29, 1899,
+              marking the culmination of academic pursuits.</p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">The tapestry of time witnessed a renewal in 1959 when the cathedral underwent a transformative renovation,
+              breathing new life into its storied structure. On February 16, 1963, the crescendo of its spiritual journey reached its
+              zenith as the cathedral ascended to the dignified status of a cathedral, an embodiment of enduring faith and
+              architectural magnificence</p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">Today, as you step into the San Sebastian Cathedral Parish of Tarlac, you step into a living narrative. Each stone,
+              each archway, and each whispering breeze carries with it the echoes of centuries past. Join us in uncovering the
+              layers of history, where faith and heritage intertwine to create a sanctuary that transcends time.</p>
           </div>
         </div>
       </div>
     </div>
 
+
     {/* Bishops */}
 
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
-            best results for our clients.
-          </p>
+
+<div className="bg-white py-24 md:py-32">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-1">
+      <div className="flex justify-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Bishops of Tarlac</h2>
+       
         </div>
-        <ul
-          role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
-        >
-          {people.map((person) => (
-            <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
-              <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={person.imageUrl} alt="" />
-              <div className="flex-auto">
-                <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
-                <p className="text-base leading-7 text-gray-600">{person.role}</p>
-                <p className="mt-6 text-base leading-7 text-gray-600">{person.bio}</p>
+        <ul role="list" className="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-1">
+          {posts.map((post) => (
+            <li key={post.name} className="flex flex-col gap-10 pt-12 sm:flex-row">
+              <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={post.imageUrl} alt="" />
+              <div className="flex-auto text-justify">
+                <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{post.name}</h3>
+                <p className="text-base leading-7 text-gray-600">{post.role}</p>
+                <p className="mt-6 text-base leading-7 text-gray-600">{post.description}</p>
+        
               </div>
             </li>
           ))}
@@ -307,8 +206,7 @@ export default function AboutUs() {
       </div>
     </div>
 
-
     {/* The Logo */}
-    <TheLogo/>
+    <TheLogo />
   </div>
 }
