@@ -43,7 +43,7 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start gap-3">
                 <div className="flex flex-shrink-0 items-center">
                   <Image
                   width={400}
@@ -53,7 +53,9 @@ export default function Navbar() {
                     alt="Your Company"
                   />
                 </div>
-
+                <div className='flex items-center'>
+                <h1 className='text-lg font-bold tracking-tight text-white'>San Sebastian Cathedral</h1>
+                </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
