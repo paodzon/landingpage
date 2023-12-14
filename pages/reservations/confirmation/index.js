@@ -15,7 +15,7 @@ const confirmationGuidelines = [
   ];
   
 
-export default function Reconciliation() {
+export default function Confirmation() {
     return (
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -88,7 +88,7 @@ and adults are welcome to participate.
         
                         <div className="flex justify-center">
                             <Link
-                                href="/reservations"
+                                href="/reservations?sacrament=confirmation_rites"
                                 className="mt-20 block w-2/4 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Make Reservations
