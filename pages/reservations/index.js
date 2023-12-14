@@ -67,7 +67,7 @@ export default function Reservations() {
                 htmlFor="child_name"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Baptizand's Full name
+                Baptizand&apos;s Full name
               </label>
               <div className="mt-2.5">
                 <input
@@ -86,7 +86,7 @@ export default function Reservations() {
                 htmlFor="father_name"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Father's Full Name
+                Father&apos;s Full Name
               </label>
               <div className="mt-2.5">
                 <input
@@ -105,7 +105,7 @@ export default function Reservations() {
                 htmlFor="mother_name"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Mother's Full Name
+                Mother&apos;s Full Name
               </label>
               <div className="mt-2.5">
                 <input
@@ -129,7 +129,7 @@ export default function Reservations() {
                 htmlFor="father_name"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Bridegroom's Full Name (Male)
+                Bridegroom&apos;s Full Name (Male)
               </label>
               <div className="mt-2.5">
                 <input
@@ -148,7 +148,7 @@ export default function Reservations() {
                 htmlFor="mother_name"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Bride's Full Name (Female)
+                Bride&apos;s Full Name (Female)
               </label>
               <div className="mt-2.5">
                 <input
@@ -263,7 +263,7 @@ export default function Reservations() {
             </label>
             <div className="mt-2.5">
               <input
-                type="phone"
+                type="tel"
                 name="phone"
                 id="phone"
                 autoComplete="phone"
