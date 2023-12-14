@@ -19,13 +19,13 @@ export default function Hero() {
 
 
   return (
-    <div className="bg-gray-900 h-full">
+    <div className="bg-gray-900">
 
 
-      <div className="relative isolate overflow-hidden pt-14">
+      <div className="relative isolate overflow-hidden pt-14 h-screen">
         <Image
         width={500}
-        height={400}
+        height={500}
           src="/images/bg_pics/1.jpg"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
@@ -42,8 +42,8 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className="mx-auto px-14 w-full py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
+        <div className="flex justify-center items-center h-full">
+          <div className="text-center flex flex-col gap-5">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               San Sebastian Cathedral Parish
             </h1>

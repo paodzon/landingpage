@@ -8,6 +8,7 @@ const posts = [
     imageUrl:
       '/images/bishops/1.jpg',
       name: 'Bishop Jesus J. Sison, D.D. ',
+      role: 'March 8 1963 - January 21 1988'
    
   },
   {
@@ -17,6 +18,7 @@ const posts = [
     imageUrl:
       '/images/bishops/2.jpg',
       name: 'Bishop Florentino F. Cinense, D.D., PhD, STL',
+      role: 'January 21 1988  - March 31 2016'
    
   },  {
     id: 3,
@@ -25,7 +27,7 @@ const posts = [
     imageUrl:
       '/images/bishops/3.jpg',
       name: 'Bishop Enrique de Vera Macaraeg ',
-      role: 'December 28, 1955 – October 23, 2023',
+      role: 'March 31 2016 - October 23 2023',
    
   },
   // More posts...
@@ -33,7 +35,7 @@ const posts = [
 
 export default function AboutUs() {
   return <div>
-    <div className="mt-24 bg-white px-6 lg:px-8">
+    <div className="mt-52 bg-white px-6 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">About us</h2>
       </div>
@@ -131,7 +133,7 @@ export default function AboutUs() {
 
     {/* History */}
 
-    <div className="overflow-hidden bg-white py-24 sm:py-32 text-justify">
+    <div id='history' className="overflow-hidden bg-white py-24 sm:py-32 text-justify">
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 mt-10">
@@ -190,7 +192,7 @@ export default function AboutUs() {
     {/* Bishops */}
 
 
-<div className="bg-white py-24 md:py-32">
+<div id='bishops' className="bg-white py-24 md:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-1">
       <div className="flex justify-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Bishops of Tarlac</h2>
@@ -216,6 +218,8 @@ export default function AboutUs() {
     </div>
 
     {/* The Logo */}
-    <TheLogo />
+    <div id='logo'>
+      <TheLogo />
+    </div>
   </div>
 }

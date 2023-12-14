@@ -5,6 +5,7 @@ import ReservationList from "@/components/homepage/ReservationList";
 import Schedule from "@/components/homepage/Schedule";
 import Image from 'next/image'
 import Link from 'next/link'
+import {toast} from 'react-hot-toast'
 export default function Home() {
   return (
     <div>
@@ -49,7 +50,6 @@ export default function Home() {
             <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Explore Our Gallery
             </p>
-
             <div className="mt-8">
               <Link
                 href="/gallery"
