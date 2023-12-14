@@ -263,7 +263,7 @@ export default function Reservations() {
             </label>
             <div className="mt-2.5">
               <input
-                type="tel"
+                type="number"
                 name="phone"
                 id="phone"
                 autoComplete="phone"
